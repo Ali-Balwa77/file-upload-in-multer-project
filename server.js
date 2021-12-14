@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
     res.sendFile(process.cwd() + '/views/index.html');
 });
 
-var upload = multer({dest:'/uploads'})
+var upload = multer({dest:'uploads/'})
    
 app.post('/api/fileanalyse',upload.single('upfile'),(req,res)=>{
   var upfile = req.file
