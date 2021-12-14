@@ -17,7 +17,7 @@ var upload = multer({dest:'uploads/'})
    
 app.post('/api/fileanalyse',upload.single('upfile'),(req,res)=>{
   var upfile = req.file
-  if(upfile === 'undefinde'){
+  if(upfile === 'undefined'){
     res.json({mesaage: 'file not uploaded'})
   }else{
     return res.json({
